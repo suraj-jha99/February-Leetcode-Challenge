@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+//using two ptr approach in O(N)
+    vector<int> shuffle(vector<int>& nums, int n) {
+        vector<int> ans;
+
+        int i=0,j=n;
+        while(n-- > 0){
+            ans.push_back(nums[i]);
+            ans.push_back(nums[j]);
+            i++;
+            j++;
+        }
+
+        return ans;
+    }
+};
